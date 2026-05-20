@@ -1,11 +1,22 @@
-@import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
-
 /*
 	Landed by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+.nanobar {
+  width: 100%;
+  height: 8px;
+  z-index: 9999;
+  top:0;
+}
+.bar {
+  width: 0;
+  height: 100%;
+  transition: height .3s;
+  background:#f00606;
+}
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -32,6 +43,20 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
+.image-container {
+	width: 75px;
+	height: 75px;
+	border: none;
+	margin-top: -7.5px;
+}
+
+.image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
 
 ol, ul {
 	list-style: none;
@@ -74,6 +99,7 @@ input, select, textarea {
 
 /* Basic */
 
+
 	html {
 		box-sizing: border-box;
 	}
@@ -99,7 +125,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.75);
-		font-family: "Roboto", Helvetica, sans-serif;
+		font-family: "Source Sans 3", sans-serif;
 		font-size: 15pt;
 		font-weight: 100;
 		line-height: 1.75em;
@@ -110,13 +136,12 @@ input, select, textarea {
 		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
-		color: #e44c65;
+		/* border-bottom: dotted 1px; */
+		/* color: #e44c65; */
 		text-decoration: none;
 	}
 
 		a:hover {
-			color: #e44c65 !important;
 			border-bottom-color: transparent;
 		}
 
@@ -135,7 +160,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 	}
@@ -558,7 +583,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Source Sans 3', sans-serif;
 			font-weight: 900;
 		}
 
@@ -686,6 +711,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+		justify-content: center;
 	}
 
 		.row > * {
@@ -1128,7 +1154,7 @@ input, select, textarea {
 					}
 
 						.row.gtr-uniform > * {
-							padding-top: 2.5em;
+							padding-top: 0em;
 						}
 
 				.row.gtr-150 {
@@ -2157,6 +2183,14 @@ input, select, textarea {
 		color: #ffffff;
 		position: relative;
 		margin: 0 0 1.5em 0;
+		font-size: 1.25em;
+		margin-top: 2em;
+		line-height: 1.75em;
+	}
+
+	header h2 {
+		font-size: 2.5em;
+		font-weight: bold;
 	}
 
 	header h2 + p {
@@ -2166,8 +2200,8 @@ input, select, textarea {
 	}
 
 	header h3 + p {
-		font-size: 1.1em;
-		margin-top: -0.8em;
+		font-size: 1.25em;
+		margin-top: 2em;
 		line-height: 1.75em;
 	}
 
@@ -2186,12 +2220,12 @@ input, select, textarea {
 	}
 
 		header.major:after {
-			background: #e44c65;
+			background: #ff0000ff;
 			content: '';
 			display: inline-block;
 			height: 0.2em;
-			max-width: 20em;
-			width: 75%;
+			max-width: 60em;
+			width: 100%;
 		}
 
 	footer.major {
@@ -2329,7 +2363,7 @@ input, select, textarea {
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
+				font-family: "Source Sans 3", sans-serif;
 				font-weight: 900;
 			}
 
@@ -2427,7 +2461,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: "Source Sans 3", sans-serif;
 			font-weight: 400;
 		}
 
@@ -2444,7 +2478,7 @@ input, select, textarea {
 		}
 
 		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands' !important;
+			font-family: "Source Sans 3", sans-serif;
 		}
 
 		.icon.alt {
@@ -2460,7 +2494,7 @@ input, select, textarea {
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
+				font-family: "Source Sans 3", sans-serif;
 				font-weight: 400;
 			}
 
@@ -2474,11 +2508,11 @@ input, select, textarea {
 			border-radius: 100%;
 			cursor: default;
 			display: inline-block;
-			height: 6em;
+			height: 8em;
 			line-height: 5.65em;
 			margin: 0 0 2em 0;
 			text-align: center;
-			width: 6em;
+			width: 8em;
 		}
 
 			.icon.major:before {
@@ -2498,7 +2532,7 @@ input, select, textarea {
 					text-rendering: auto;
 					line-height: 1;
 					text-transform: none !important;
-					font-family: 'Font Awesome 5 Free';
+					font-family: "Source Sans 3", sans-serif;
 					font-weight: 400;
 				}
 
@@ -2839,7 +2873,7 @@ input, select, textarea {
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
-		font-weight: 300;
+		font-weight: 600;
 		height: 3em;
 		line-height: 3em;
 		padding: 0 2.25em;
@@ -2855,8 +2889,8 @@ input, select, textarea {
 		input[type="button"]:active,
 		.button:hover,
 		.button:active {
-			box-shadow: inset 0 0 0 1px #e44c65;
-			color: #e44c65 !important;
+			box-shadow: inset 0 0 0 1px #ff0000ff;
+			color: #ff0000ff !important;
 		}
 
 		input[type="submit"]:active,
@@ -3143,11 +3177,11 @@ input, select, textarea {
 		}
 
 		.spotlight.style2 .content {
-			border-color: #5480f1;
+			border-color: #ff0000ff;
 		}
 
 		.spotlight.style3 .content {
-			border-color: #39c088;
+			border-color: #ff0000ff;
 		}
 
 		.spotlight.inactive .content {
@@ -3197,11 +3231,11 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		padding: 6em 0 4em 0;
+		padding: 0.5em 0 2em 0;
 	}
 
 		.wrapper.style2 {
-			background: #e44c65;
+			background: rgb(128, 0, 0);
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
@@ -3236,7 +3270,7 @@ input, select, textarea {
 			.wrapper.style2 input[type="button"].primary,
 			.wrapper.style2 .button.primary {
 				background-color: #ffffff;
-				color: #e44c65 !important;
+				color: #000000 !important;
 			}
 
 				.wrapper.style2 input[type="submit"].primary:hover, .wrapper.style2 input[type="submit"].primary:active,
@@ -3388,7 +3422,7 @@ input, select, textarea {
 
 		#header h1 {
 			height: inherit;
-			left: 1.25em;
+			left: 4em;
 			line-height: inherit;
 			margin: 0;
 			position: absolute;
@@ -3476,7 +3510,7 @@ input, select, textarea {
 			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
 			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
 			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: linear-gradient(to top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
 			content: '';
 			display: block;
 			height: 100%;
@@ -3535,8 +3569,8 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #272833;
-		padding: 6em 0;
+		background: #1c1d26;
+		padding: 1em 0;
 		text-align: center;
 	}
 
@@ -3553,7 +3587,7 @@ input, select, textarea {
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
+				font-family: "Source Sans 3", sans-serif;
 				font-weight: 400;
 			}
 
@@ -3784,6 +3818,7 @@ input, select, textarea {
 
 			header h2 + p {
 				font-size: 1em;
+				line-height: 5em;
 			}
 
 			header h3 + p {
@@ -3928,7 +3963,7 @@ input, select, textarea {
 						text-rendering: auto;
 						line-height: 1;
 						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
+						font-family: "Source Sans 3", sans-serif;
 						font-weight: 900;
 					}
 

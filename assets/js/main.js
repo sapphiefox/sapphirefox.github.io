@@ -247,4 +247,14 @@
 		$banner
 			._parallax();
 
+	// Progress bar (custom)
+		var options = {
+			classname: 'my-class',
+  			id: 'my-id',
+			target: document.getElementById('myDivId')
+			};
+
+		var nanobar = new Nanobar( options );
+		nanobar.go(30);
+
 })(jQuery);
